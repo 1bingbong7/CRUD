@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 align="center">CRUD</h2>
+    <button class="btn btn-primary float-right" style="margin-bottom: 10px;" [routerLink]="['/Add']">ADD</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of data; let i = index">
+            <td>{{d.name}}</td>
+            <td>{{d.age}}</td>
+            <td>{{d.address}}</td>
+            <td>
+                <button class="btn btn-info" (click)="editData(d._id)">Edit</button>&nbsp;&nbsp;
+                <button class="btn btn-danger" (click)="deleteData(d._id)">Delete</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
