@@ -68,7 +68,7 @@ module.exports = (app) => {
     } catch (error) {
       return res.send({
         status: "fail",
-        ccode: "get-single/error",
+        ccode: "update/error",
         result: error,
       });
     }

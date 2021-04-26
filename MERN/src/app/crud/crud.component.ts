@@ -17,7 +17,6 @@ export class CrudComponent implements OnInit {
   }
   async getAllData(){
     this.data = await this.crud.getAllData();
-    console.log(this.data);
   }
 
   async deleteData(id){
